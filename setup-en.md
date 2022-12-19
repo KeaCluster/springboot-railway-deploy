@@ -20,7 +20,7 @@ There's an ```application-prod.yml``` file used to save basic production config 
 - Login or setup new railway account.
 ![Railway login screen](/img/login.png)
 - Recommended to be setup from github for easier access to repos.
-- [Railway dot app](railway.app)
+- [Railway.app](railway.app)
 
 ### SETUP - New project
 
@@ -131,9 +131,49 @@ web: java -jar -Dserver.port=$PORT build/libs/ecommerceDB-0.0.1-SNAPSHOT.jar
 
 - Leave it there
 
-## Adding App as a service
+## Adding our App as a service
 
-- One of the few last steps is to add our App on github as a service
+- One of the few last steps is to add our App on railway as a service
+- Click on new service inside your railway project
+- Select GitHub repo and look for your Spring Boot App
+![GitHub Repo](/img/githubRepo.png)
+- Once clicked it will begin a build and then a deploy
+- This first deploy will most likely fail due to environment variables not being Setup
+![Build v1](/img/buildv1.png)
+- Click on your service and select the variables tab.
+- Once there, click on Raw Editor on the right handside
+- And paste our saved Environment Variables from MySLQ **Already edited and filled with your info**
+
+```properties
+spring_profiles_active=prod
+PROD_DB_HOST=HOST_HERE
+PROD_DB_PORT=POST_HERE
+PROD_DB_NAME=railway
+PROD_DB_PASSWORD=PASSWORD_HERE
+PROD_DB_USERNAME=postgres
+```
+
+It should look something like this:
+![Environment Variables V2](/img/EnvironmentVar2.png)
+
+- Click on update Variables
+- Wait a bit and a new build should begin.
+
+
+### Generate Domain
+
+- On your app menu inside railway, click on ```Settings```
+- You'll see a button to generate a Domain.
+- Click on it
+- Now you can access you app from the web by accessing this url
+
+![domain](/img/domain.png)
+
+## Other info
+
+- Check your available uptime hours on the top right corner
+- Be careful not to overdo this period
+![Data period availability](/img/period.png)
 
 ## References
 

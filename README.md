@@ -5,4 +5,4 @@ Basic info to deploy a spring boot application on railway
 
 ```setup-en.md``` contains english setup
 
-```setup-es.md``` contains spanish setup
+```setup-es.md``` contiene setup en español
