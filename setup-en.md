@@ -50,7 +50,9 @@ Services work as plugins you can add to your project. They vary from Database se
 - Keep it **private**
 ![Mysql Variables](/img/mysqlvariables.png)
 
-## Environment variables
+## Parte 2
+
+### Environment variables
 
 These properties define your DB/Service environment variables. They're necessary info for a proper connection between your APP and the DB.
 
@@ -67,8 +69,10 @@ PROD_DB_NAME=railway
 PROD_DB_PASSWORD=PASSWORD_HERE
 PROD_DB_USERNAME=USER_HERE
 ```
+---
 
 ### SETUP - Spring Boot app
+---
 
 ### SETUP - Spring Boot App - application-prod.yml
 
@@ -92,6 +96,7 @@ spring:
       mode: always # you won't do this in prod, I'm just doing this for demo purposes
 ```
 - Check tabulations. ```YAML``` files are weird
+
 
 ### SETUP - Spring Boot App - application.properties
 
@@ -123,7 +128,9 @@ web: java -jar -Dserver.port=$PORT build/libs/ecommerceDB-0.0.1-SNAPSHOT.jar
 
 - This is basic info for railway to identify the ```.jar``` file and the Port it should be working on.
 
-## Github APP 
+## Parte 3
+
+### Github APP 
 
 - Push your entire project on to a github repo
 - It can be public or private
@@ -131,7 +138,7 @@ web: java -jar -Dserver.port=$PORT build/libs/ecommerceDB-0.0.1-SNAPSHOT.jar
 
 - Leave it there
 
-## Adding our App as a service
+### Adding our App as a service
 
 - One of the few last steps is to add our App on railway as a service
 - Click on new service inside your railway project
@@ -150,7 +157,7 @@ PROD_DB_HOST=HOST_HERE
 PROD_DB_PORT=POST_HERE
 PROD_DB_NAME=railway
 PROD_DB_PASSWORD=PASSWORD_HERE
-PROD_DB_USERNAME=postgres
+PROD_DB_USERNAME=USER_HERE
 ```
 
 It should look something like this:
@@ -166,6 +173,7 @@ It should look something like this:
 - You'll see a button to generate a Domain.
 - Click on it
 - Now you can access you app from the web by accessing this url
+- All endpoints should be made after this initial URL
 
 ![domain](/img/domain.png)
 
