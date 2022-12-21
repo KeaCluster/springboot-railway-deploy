@@ -58,7 +58,8 @@ Los servicios trabajan similar a plugins que se agregan al proyecto. Pueden vari
 - Todas las variables de entorno se pegarán en las VE de la App antes del deploy.
 - Guarda la información de abajo en un .txt o en algún lugar donde no se perderá
 - Mantén ```spring-profiles_active``` Y ```PROD_DB_NAME``` sin modificar.
-
+- Cuidado de no olvidar la primera linea 
+  
 ```properties
 spring_profiles_active=prod
 PROD_DB_HOST=HOST_HERE
@@ -96,7 +97,12 @@ spring:
 
 
 ### SETUP - Spring Boot App - application.properties
+---
+### Opcional
+- Si se dejará de trabajar de forma local la siguiente es la configuración para el archivo ```application.properties``` en el servidor.
+- En caso de continuar de forma local, se puede mantener el archivo sin modificar y saltar éste paso.
 
+---
 - Actualiza el archivo ```src/main/resources/application.properties```  y verifica la información.
 ```application.properties```
 ```properties
@@ -122,6 +128,11 @@ web: java -jar -Dserver.port=$PORT build/libs/ecommerceDB-0.0.1-SNAPSHOT.jar
 ```
 
 - Ésta es información básica para que railway identifique el archivo ```.jar``` y el puerto sobre el cuál debe trabajar.
+- Es importante que la versión ```0.0.1-SNAPSHOT.jar``` coincida con la de el proyecto.
+- Se puede verificar en ```build.gradle```
+```gradle
+version = '0.0.1-SNAPSHOT'
+```
 
 ## Parte 3
 

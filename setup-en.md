@@ -10,7 +10,7 @@ Not ready for production
 > ?Could be ready for production
 
 ### Info
-
+**
 There's an ```application-prod.yml``` file used to save basic production config data. This will have different info depending on the platform you're making the deploy. Check it for more context. What's in there however is specifically for railway.
 
 ## Part 1
@@ -60,6 +60,7 @@ These properties define your DB/Service environment variables. They're necessary
 - All these environment variables are to be pasted in your service Variables before deploying
 - Save the bellow information in a .txt file or somewhere it won't get lost
 - Keep ```spring-profiles_active``` AND ```PROD_DB_NAME``` unmodified.
+- Watch out. Dont forget the first line.
 
 ```properties
 spring_profiles_active=prod
@@ -100,8 +101,13 @@ spring:
 
 ### SETUP - Spring Boot App - application.properties
 
-- Update ```src/main/resources/application.properties``` 
-and verify info.
+---
+### Optional
+  - If you won't work locally, the following is server config for the ```application.properties``` file.
+  - If you're still working both locally and remotely, this step can be skipped. 
+---
+
+- Update ```src/main/resources/application.properties``` and verify info.
 
 ```application.properties```
 ```properties
@@ -127,8 +133,13 @@ web: java -jar -Dserver.port=$PORT build/libs/ecommerceDB-0.0.1-SNAPSHOT.jar
 ```
 
 - This is basic info for railway to identify the ```.jar``` file and the Port it should be working on.
+- It's important that the version ```0.0.1-SNAPSHOT.jar``` matches your project's
+- You can check inside ```build.gradle```
+```gradle
+version = '0.0.1-SNAPSHOT'
+```
 
-## Parte 3
+## Part 3
 
 ### Github APP 
 
