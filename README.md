@@ -1,4 +1,4 @@
-# Spring Boot-railway-setup
+# Spring Boot-railway Deploy setup
 Basic info to deploy a spring boot application on railway
 
 ## Setup
