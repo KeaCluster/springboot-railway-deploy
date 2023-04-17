@@ -46,7 +46,7 @@ Los servicios trabajan similar a plugins que se agregan al proyecto. Pueden vari
 
 ***Importante***
 
-- Dar click en la tab de Variables. Una vez ahí, trendremos toda la información para realizar nuestra conexión de la API hacia la BD.
+- Dar click en la tab de Variables (pueden estar en otras tabs ya que se actualiza de forma regular). Una vez ahí, trendremos toda la información para realizar nuestra conexión de la API hacia la BD.
 - Hay que mantener ésta información **privada**
 ![Mysql Variables](/img/mysqlvariables.png)
 
