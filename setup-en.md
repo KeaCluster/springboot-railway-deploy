@@ -46,7 +46,7 @@ Services work as plugins you can add to your project. They vary from Database se
 
 ***Check this out***
 
-- Travel to your Variables tab. Once there, you'll realize that's all the info to make your connection from your API to your DB.
+- Travel to your Variables tab (might be in other tabs since this updates regularly). Once there, you'll realize that's all the info to make your connection from your API to your DB.
 - Keep it **private**
 ![Mysql Variables](/img/mysqlvariables.png)
 
